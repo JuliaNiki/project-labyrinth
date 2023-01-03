@@ -34,7 +34,7 @@ export const fetchFirstQuestion = (input) => {
 
     return (dispatch) => {
         dispatch(ui.actions.setLoading(true))
-        fetch('https://wk16-backend.herokuapp.com/start',
+        fetch('https://labyrinth.technigo.io/start',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -53,7 +53,7 @@ export const fetchOtherQuestions = (userName, direction) => {
     return (dispatch) => {
         console.log(direction)
         dispatch(ui.actions.setLoading(true))
-        fetch('https://wk16-backend.herokuapp.com/action',
+        fetch('https://labyrinth.technigo.io/action',
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/JSON' },
